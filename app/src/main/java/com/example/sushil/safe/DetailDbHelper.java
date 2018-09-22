@@ -26,9 +26,9 @@ public class DetailDbHelper extends SQLiteOpenHelper {
                 + ContactContract.DetailsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ContactContract.DetailsEntry.COLUMN_DETAIL_NAME + " TEXT NOT NULL, "
                 + ContactContract.DetailsEntry.COLUMN_DETAIL_NUMBER + " INTEGER NOT NULL UNIQUE, "
-                + ContactContract.DetailsEntry.COLUMN_DETAIL_EMAIL + "TEXT, "
-                + ContactContract.DetailsEntry.COLUMN_DETAIL_PASSWORD + "TEXT NOT NULL, "
-                + ContactContract.DetailsEntry.COLUMN_DETAIL_ADDRESS + "TEXT " + ");";
+                + ContactContract.DetailsEntry.COLUMN_DETAIL_EMAIL + " TEXT, "
+                + ContactContract.DetailsEntry.COLUMN_DETAIL_PASSWORD + " TEXT NOT NULL, "
+                + ContactContract.DetailsEntry.COLUMN_DETAIL_ADDRESS + " TEXT " + ");";
 
         sqLiteDatabase.execSQL(SQL_CREATE_DETAIL);
     }
