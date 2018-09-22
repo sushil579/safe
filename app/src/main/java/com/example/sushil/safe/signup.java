@@ -110,6 +110,5 @@ public class signup extends AppCompatActivity implements android.app.LoaderManag
 
     @Override
     public void onLoaderReset(android.content.Loader<Cursor> loader) {
-        loader.abandon();
     }
 }
