@@ -90,6 +90,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/reg2"
+            style="?android:textAppearanceSmall"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/regsiter"
+            android:textStyle="bold" />
 
 
 
