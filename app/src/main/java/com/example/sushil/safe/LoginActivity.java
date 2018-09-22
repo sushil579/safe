@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.sign_up);
+        Button mEmailSignInButton = (Button) findViewById(R.id.reg);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,10 +96,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        TextView family = (TextView) findViewById(R.id.sign_up);
+        TextView signup1 = (TextView) findViewById(R.id.reg);
 
         // Set a click listener on that View
-        family.setOnClickListener(new OnClickListener() {
+        signup1.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the family category is clicked on.
             @Override
             public void onClick(View view) {

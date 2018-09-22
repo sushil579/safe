@@ -7,7 +7,9 @@ import android.provider.BaseColumns;
 public class ContactContract {
     public static final String CONTENT_AUTHORITY = "com.example.sushil.safe";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://"+CONTENT_AUTHORITY);
+
     public static final String PATH_CONTACT = "contacts";
+    public static final String PATH_DETAILS = "details";
 
     private ContactContract() {}
 
@@ -29,5 +31,24 @@ public class ContactContract {
 
         public static final String CONTENT_ITEM_TYPE =
                 ContentResolver.CURSOR_ITEM_BASE_TYPE+"/"+CONTENT_AUTHORITY+"/"+PATH_CONTACT;
+    }
+
+    public static abstract class DetailsEntry implements BaseColumns {
+        public static final String TABLE_NAME = "details";
+
+        public static final String _ID = BaseColumns._ID;
+        public static final String COLUMN_DETAIL_NAME = "name";
+        public static final String COLUMN_DETAIL_NUMBER = "number";
+        public static final String COLUMN_DETAIL_EMAIL = "email";
+        public static final String COLUMN_DETAIL_PASSWORD = "password";
+        public static final String COLUMN_DETAIL_ADDRESS = "address";
+
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_DETAILS);
+
+        public static final String CONTENT_LIST_TYPE =
+                ContentResolver.CURSOR_DIR_BASE_TYPE+"/"+CONTENT_AUTHORITY+"/"+PATH_DETAILS;
+
+        public static final String CONTENT_ITEM_TYPE =
+                ContentResolver.CURSOR_ITEM_BASE_TYPE+"/"+CONTENT_AUTHORITY+"/"+PATH_DETAILS;
     }
 }
