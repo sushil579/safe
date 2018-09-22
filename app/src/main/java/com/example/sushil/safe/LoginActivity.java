@@ -84,17 +84,41 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         });
 
 
-
-
-
-
-        Button mEmailSignInButton = (Button) findViewById(R.id.reg);
+        Button mEmailSignInButton = (Button) findViewById(R.id.login);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
             }
         });
+
+
+        TextView signup4 = (TextView) findViewById(R.id.login);
+
+        // Set a click listener on that View
+        signup4.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the family category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link FamilyActivity}
+                Intent familyIntent = new Intent(LoginActivity.this, MainActivity.class);
+
+                // Start the new activity
+                startActivity(familyIntent);
+            }
+        });
+
+
+
+
+        Button eEmailSignInButton = (Button) findViewById(R.id.reg);
+        eEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLogin();
+            }
+        });
+
 
         TextView signup1 = (TextView) findViewById(R.id.reg);
 
