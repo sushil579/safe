@@ -20,11 +20,16 @@
     android:layout_height="wrap_content"
     android:background="@color/tan_background"
     android:minHeight="@dimen/list_item_height"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="20dp"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingBottom="16dp">
 
     <ImageView
         android:id="@+id/image"
@@ -65,10 +70,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp">
 
         <ImageView
-            android:id="@+id/image"
             android:layout_width="@dimen/list_item_height"
             android:layout_height="@dimen/list_item_height"
             android:src="@drawable/baseline_directions_car_white_24dp"
@@ -76,14 +82,12 @@
             />
 
         <LinearLayout
-            android:id="@+id/text_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="16dp">
 
             <TextView
-                android:id="@+id/miwok_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -93,7 +97,6 @@
                 tools:text="@string/travel" />
 
             <TextView
-                android:id="@+id/default_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
@@ -105,27 +108,25 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingBottom="16dp">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="@dimen/list_item_height"
-            android:layout_height="@dimen/list_item_height"
-            android:src="@drawable/baseline_report_white_24dp"
-
-
-            />
+        <ImageView android:id="@+id/image2"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/baseline_report_white_24dp"
+        />
 
         <LinearLayout
-            android:id="@+id/text_container"
+            android:id="@+id/text_container2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="16dp">
 
             <TextView
-                android:id="@+id/miwok_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -135,7 +136,6 @@
                 tools:text="@string/emergency" />
 
             <TextView
-                android:id="@+id/default_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
