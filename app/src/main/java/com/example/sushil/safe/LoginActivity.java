@@ -3,6 +3,7 @@ package com.example.sushil.safe;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -82,7 +83,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+
+
+
+
+
+        Button mEmailSignInButton = (Button) findViewById(R.id.sign_up);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,9 +96,26 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        TextView family = (TextView) findViewById(R.id.sign_up);
+
+        // Set a click listener on that View
+        family.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the family category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link FamilyActivity}
+                Intent familyIntent = new Intent(LoginActivity.this, signup.class);
+
+                // Start the new activity
+                startActivity(familyIntent);
+            }
+        });
+
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
