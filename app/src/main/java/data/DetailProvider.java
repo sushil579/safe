@@ -12,6 +12,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.example.sushil.safe.ContactDbHelper;
+import com.example.sushil.safe.DetailDbHelper;
+
 import data.ContactContract.DetailsEntry;
 /**
  * Created by win10 on 22-09-2018.
